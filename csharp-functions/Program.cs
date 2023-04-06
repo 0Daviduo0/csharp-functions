@@ -10,19 +10,19 @@ namespace csharp_functions
 
             int[] numeri = { 2, 6, 7, 5, 3, 9 };
 
-            ////Stampa Array
+            //Stampa Array
 
-            //StampaArray(numeri);
+            StampaArray(numeri);
 
 
             ////Numeri al quadrato
 
             //Console.WriteLine("Scrivi un numero e questo verrà elevato al quadrato!");
             //int numero = 0;
-                //while (!int.TryParse(Console.ReadLine(), out numero))
-                //{
-                //    Console.WriteLine("ci hai provato! Inserisci un numero >:(");
-                //}
+            //while (!int.TryParse(Console.ReadLine(), out numero))
+            //{
+            //    Console.WriteLine("ci hai provato! Inserisci un numero >:(");
+            //}
             //int numeroAlQuadrato = Quadrato(numero);
             //Console.WriteLine($"Il quadrato di {numero} è {numeroAlQuadrato}");
 
@@ -72,10 +72,14 @@ namespace csharp_functions
             Console.WriteLine("----------STAMPA ARRAY----------");
 
             //ciclo per stampare elementi dell'array
+            Console.Write("[");
             for (int i = 0; i < array.Length; i++)
             {
-                Console.WriteLine("elemento n." + (i + 1) + ": " + array[i]);
+                Console.Write(array[i]);
+                if (i < array.Length - 1)
+                    Console.Write(", ");
             }
+            Console.Write("]");
         }
 
 
