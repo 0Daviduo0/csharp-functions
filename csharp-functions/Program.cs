@@ -101,7 +101,6 @@ namespace csharp_functions
 
             //Eleva Array
 
-            int[] ArralQuadrato = Array.Empty<int>();
             int[] ArrAlQuadrato = ElevaArrayAlQuadrato(numeri);
             Console.WriteLine("Il nuovo array al quadrato è: ");
             StampaArray(ArrAlQuadrato);
@@ -111,7 +110,6 @@ namespace csharp_functions
 
             int somma = sommaElementiArray(numeri);
             Console.WriteLine("la somma degli elementi dell'array è: " + somma);
-
 
         }
     }
