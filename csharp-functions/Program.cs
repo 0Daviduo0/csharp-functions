@@ -13,7 +13,7 @@ namespace csharp_functions
 
             for (int i = 0; i < array.Length; i++)
             {
-                Console.WriteLine("elemento n." + i + ": " + array[i]);
+                Console.WriteLine("elemento n." + (i+1) + ": " + array[i]);
             }
         }
 
@@ -35,18 +35,11 @@ namespace csharp_functions
         {
             Console.WriteLine("----------ARRAY AL QUADRATO----------");
 
-
-            int[] alQuadrato = Array.Empty<int>();
-
             for (int i = 0; i < array.Length; i++)
             {
-                int number = array[i];
-                int numberAlQuadrato = number * number;
-                Array.Resize(ref alQuadrato, alQuadrato.Length + 1);
-                alQuadrato[alQuadrato.Length - 1] = numberAlQuadrato;
-
+                array[i] *= array[i];
             }
-            return alQuadrato;
+            return array;
 
         }
 
@@ -57,15 +50,12 @@ namespace csharp_functions
         {
             Console.WriteLine("----------SOMMA DELL'ARRAY----------");
 
-            int[] ArrNumeri = Array.Empty<int>();
             int somma = 0;
 
             for (int i = 0; i < array.Length; i++)
             {
                 int number = array[i];
                 somma = somma + number;
-                Array.Resize(ref ArrNumeri, ArrNumeri.Length + 1);
-                ArrNumeri[ArrNumeri.Length - 1] = somma;
 
             }
             return somma;
@@ -79,11 +69,13 @@ namespace csharp_functions
         {
             Console.WriteLine("----------DIMENSIONE ARRAY----------");
 
+            //
             int[] ArrayPersonalizzato = new int[dimensione];
             Console.WriteLine("La dimensione scelta per l'array è di " + dimensione + " spazi");
             Console.WriteLine("Adesso scegli gli elementi che vuoi avere all'interno del tuo array");
             for (int i = 0; i < dimensione; i++)
             {
+                Console.Write("Scegli un valore per il " + (i+1) + "o posto: ");
                 int numeroArray = 0;
                 while (!int.TryParse(Console.ReadLine(), out numeroArray))
                             {
@@ -93,13 +85,6 @@ namespace csharp_functions
             }
             return ArrayPersonalizzato;
         }
-
-
-
-
-
-
-
 
 
 
