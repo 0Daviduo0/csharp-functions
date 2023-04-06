@@ -73,6 +73,24 @@ namespace csharp_functions
         }
 
 
+        //Array personalizzato
+
+        static int[] ArrayPersonalizzato(int dimensione)
+        {
+            Console.WriteLine("----------DIMENSIONE ARRAY----------");
+
+            int[] ArrayPersonalizzato = new int[dimensione];
+            Console.WriteLine("La dimensione scelta per l'array è di " + dimensione + " spazi");
+            Console.WriteLine("Adesso scegli gli elementi che vuoi avere all'interno del tuo array");
+            for (int i = 0; i < dimensione; i++)
+            {
+                int numeroArray = Int32.Parse(Console.ReadLine());
+                ArrayPersonalizzato[i] = numeroArray;
+            }
+            return ArrayPersonalizzato;
+        }
+
+
 
 
 
@@ -86,30 +104,49 @@ namespace csharp_functions
 
             int[] numeri = { 2, 6, 7, 5, 3, 9 };
 
-            //Stampa Array
+            ////Stampa Array
 
-            StampaArray(numeri);
-
-
-            //Numeri al quadrato
-
-            Console.WriteLine("Scrivi un numero e questo verrà elevato al quadrato!");
-            int numero = Int32.Parse(Console.ReadLine());
-            int numeroAlQuadrato = Quadrato(numero);
-            Console.WriteLine($"Il quadrato di {numero} è {numeroAlQuadrato}");
+            //StampaArray(numeri);
 
 
-            //Eleva Array
+            ////Numeri al quadrato
 
-            int[] ArrAlQuadrato = ElevaArrayAlQuadrato(numeri);
+            //Console.WriteLine("Scrivi un numero e questo verrà elevato al quadrato!");
+            //int numero = Int32.Parse(Console.ReadLine());
+            //int numeroAlQuadrato = Quadrato(numero);
+            //Console.WriteLine($"Il quadrato di {numero} è {numeroAlQuadrato}");
+
+
+            ////Eleva Array
+
+            //int[] ArrAlQuadrato = ElevaArrayAlQuadrato(numeri);
+            //Console.WriteLine("Il nuovo array al quadrato è: ");
+            //StampaArray(ArrAlQuadrato);
+
+
+            ////Somma Array
+
+            //int somma = sommaElementiArray(numeri);
+            //Console.WriteLine("la somma degli elementi dell'array è: " + somma);
+
+
+            //BONUS - array di dimensioni e contenuto scelto dall'utente
+
+            Console.WriteLine("Scrivi la quantità di spazi che vuoi all'interno dell'array");
+            int dimensione = Int32.Parse(Console.ReadLine());
+            int[] Array = ArrayPersonalizzato(dimensione);
+            Console.WriteLine("Ecco l'array da te creato:");
+            StampaArray(Array);
+            Console.WriteLine("------------------------Eseguo le altre funzioni------------------------");
+
+            //AL QUADRATO
+            int[] ArrPersonaleAlQuadrato = ElevaArrayAlQuadrato(Array);
             Console.WriteLine("Il nuovo array al quadrato è: ");
-            StampaArray(ArrAlQuadrato);
+            StampaArray(ArrPersonaleAlQuadrato);
 
-
-            //Somma Array
-
-            int somma = sommaElementiArray(numeri);
-            Console.WriteLine("la somma degli elementi dell'array è: " + somma);
+            //SOMMA DEGLI ELEMENTI
+            int sommaPersonale = sommaElementiArray(Array);
+            Console.WriteLine("la somma degli elementi dell'array è: " + sommaPersonale);
 
         }
     }
