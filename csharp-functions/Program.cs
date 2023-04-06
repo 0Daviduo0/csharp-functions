@@ -84,8 +84,12 @@ namespace csharp_functions
             Console.WriteLine("Adesso scegli gli elementi che vuoi avere all'interno del tuo array");
             for (int i = 0; i < dimensione; i++)
             {
-                int numeroArray = Int32.Parse(Console.ReadLine());
-                ArrayPersonalizzato[i] = numeroArray;
+                int numeroArray = 0;
+                while (!int.TryParse(Console.ReadLine(), out numeroArray))
+                            {
+                                Console.WriteLine("ci hai provato! Inserisci un numero >:(");
+                            }
+                    ArrayPersonalizzato[i] = numeroArray;
             }
             return ArrayPersonalizzato;
         }
@@ -112,7 +116,11 @@ namespace csharp_functions
             ////Numeri al quadrato
 
             //Console.WriteLine("Scrivi un numero e questo verrà elevato al quadrato!");
-            //int numero = Int32.Parse(Console.ReadLine());
+            //int numero = 0;
+            //while (!int.TryParse(Console.ReadLine(), out numero))
+            //{
+            //    Console.WriteLine("ci hai provato! Inserisci un numero >:(");
+            //}
             //int numeroAlQuadrato = Quadrato(numero);
             //Console.WriteLine($"Il quadrato di {numero} è {numeroAlQuadrato}");
 
@@ -133,7 +141,11 @@ namespace csharp_functions
             //BONUS - array di dimensioni e contenuto scelto dall'utente
 
             Console.WriteLine("Scrivi la quantità di spazi che vuoi all'interno dell'array");
-            int dimensione = Int32.Parse(Console.ReadLine());
+            int dimensione = 0;
+            while (!int.TryParse(Console.ReadLine(), out dimensione))
+            {
+                Console.WriteLine("ci hai provato! Inserisci un numero >:(");
+            }
             int[] Array = ArrayPersonalizzato(dimensione);
             Console.WriteLine("Ecco l'array da te creato:");
             StampaArray(Array);
