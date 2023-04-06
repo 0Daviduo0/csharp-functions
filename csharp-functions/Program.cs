@@ -6,18 +6,20 @@ namespace csharp_functions
     {
 
         ////Funzione per stampare contenuto array
-        static void StampaArray(int[] array)
-        {
-            Console.WriteLine("----------STAMPA ARRAY----------");
 
-            for (int i = 0; i < array.Length; i++)
-            {
-                Console.WriteLine("elemento n." + i + ": " + array[i]);
-            }
-        }
+        //static void StampaArray(int[] array)
+        //{
+        //    Console.WriteLine("----------STAMPA ARRAY----------");
+
+        //    for (int i = 0; i < array.Length; i++)
+        //    {
+        //        Console.WriteLine("elemento n." + i + ": " + array[i]);
+        //    }
+        //}
 
 
         ////Funzione per elevare al quadrato il numero dato e stamparlo
+
         //static int Quadrato(int numero)
         //{
         //    Console.WriteLine("----------NUMERI AL QUADRATO----------");
@@ -31,7 +33,7 @@ namespace csharp_functions
 
         //static int[] ElevaArrayAlQuadrato(int[] array)
         //{
-        //    int[] alQuadrato = Array.Empty<int>(); 
+        //    int[] alQuadrato = Array.Empty<int>();
 
         //    for (int i = 0; i < array.Length; i++)
         //    {
@@ -42,6 +44,26 @@ namespace csharp_functions
 
         //    }
         //    return alQuadrato;
+
+        //}
+
+
+        ////Somma di tutti gli elementi dell'array
+        
+        //static int sommaElementiArray(int[] array)
+        //{
+        //    int[] ArrNumeri = Array.Empty<int>();
+        //    int somma = 0;
+
+        //    for (int i = 0; i < array.Length; i++)
+        //    {
+        //        int number = array[i];
+        //        somma = somma + number;
+        //        Array.Resize(ref ArrNumeri, ArrNumeri.Length + 1);
+        //        ArrNumeri[ArrNumeri.Length - 1] = somma;
+
+        //    }
+        //    return somma;
 
         //}
 
@@ -57,7 +79,7 @@ namespace csharp_functions
         static void Main(string[] args)
         {
 
-            int[] numeri = { 1, 2, 3, 4, 5 };
+            int[] numeri = { 2, 6, 7, 5, 3, 9 };
 
             ////Stampa Array
 
@@ -73,9 +95,16 @@ namespace csharp_functions
 
 
             ////Eleva Array
+
             //int[] ArralQuadrato = Array.Empty<int>();
             //int[] ArrAlQuadrato = ElevaArrayAlQuadrato(numeri);
             //StampaArray(ArrAlQuadrato);
+
+
+            ////Somma Array
+
+            //int somma = sommaElementiArray(numeri);
+            //Console.WriteLine(somma);
 
 
         }
