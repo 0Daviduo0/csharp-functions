@@ -36,7 +36,7 @@ namespace csharp_functions
             //Console.Writeline(sommaElementiArray(ArrAlQuadrato));
             //Console.WriteLine("L'array originale è: ");
             //StampaArray(numeri);
-
+            
 
 
 
